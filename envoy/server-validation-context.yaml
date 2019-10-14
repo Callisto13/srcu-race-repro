@@ -1,0 +1,4 @@
+resources:
+- '@type': type.fake
+  name: fake-server-validation-context
+version_info: "0"

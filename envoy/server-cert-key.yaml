@@ -1,0 +1,4 @@
+resources:
+- '@type': type.fake
+  name: fake-server-cert-and-key
+version_info: "0"

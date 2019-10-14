@@ -1,0 +1,8 @@
+[package]
+
+name = "inotify-test-rust"
+version = "0.0.1"
+authors = [ "callisto" ]
+
+[dependencies]
+inotify = "0.7"
