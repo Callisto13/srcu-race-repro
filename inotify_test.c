@@ -27,19 +27,23 @@ main(int argc, char *argv[])
     for (j = 1; j < argc; j++) {
 	/* For each command-line argument, add a watch for all events */
 	wd = inotify_add_watch(inotifyFd, argv[j], IN_ALL_EVENTS);
-	if (wd == -1)
+	if (wd == -1) {
 	    printf("failed: inotify_add_watch on %s\n", argv[j]);
-
-	if (0)
+	}
+	    
+	if (0) {
 		printf("Watching %s using wd %d\n", argv[j], wd);
-
+	}
+	    
 	/* Remove each event */
 	rv = inotify_rm_watch(inotifyFd, wd);
-	if (rv == -1)
+	if (rv == -1) {
 	    printf("failed: inotify_rm_watch on %s\n", argv[j]);
-
-	if (0)
+	}
+	    
+	if (0) {
 		printf("inotify_rm_watch returned %d\n", rv);
+	}    
     }
 
 
